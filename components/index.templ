@@ -1,10 +1,28 @@
 package components
 
 templ Index(name string, initialCount int) {
-	@Layout("Home | Templ") {
-		<div class="min-h-screen p-8 space-y-6">
-			<div class="max-w-md">
-				@Counter(initialCount)
+	@Layout("Gopher Tools") {
+		<div class="h-full p-8 space-y-6">
+			<div class="flex flex-col">
+				<div class="flex flex-col gap-4 items-center justify-center">
+					<h1 class="text-5xl text-sky-200 font-semibold hover:underline transition-all duration-300">Gopher Tools </h1>
+					<span class="text-lg">Free & Open Source Tools written in Go</span>
+				</div>
+				<div class="flex items-center w-1/2 mx-auto mt-3 gap-4">
+					<div class="flex-1 h-px bg-gradient-to-r from-transparent to-sky-400"></div>
+					<div class="w-2 h-2 rounded-full bg-sky-400"></div>
+					<div class="flex-1 h-px bg-gradient-to-l from-transparent to-sky-400"></div>
+				</div>
+				<div class="w-full p-4 m-4 grid grid-cols-4 gap-4">
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+					<div class="bg-teal-400/25 aspect-video"></div>
+				</div>
 			</div>
 		</div>
 	}
