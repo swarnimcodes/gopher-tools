@@ -10,8 +10,8 @@ import (
 	"github.com/a-h/templ"
 	"github.com/go-chi/chi/v5"
 
-	"github.com/swarnimcodes/gopher-toolbox/components"
-	"github.com/swarnimcodes/gopher-toolbox/handlers"
+	"github.com/swarnimcodes/gopher-tools/components"
+	"github.com/swarnimcodes/gopher-tools/handlers"
 )
 
 // embed the static dir into the binary at comp time
