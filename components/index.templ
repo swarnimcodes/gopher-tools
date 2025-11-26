@@ -1,0 +1,11 @@
+package components
+
+templ Index(name string, initialCount int) {
+	@Layout("Home | Templ") {
+		<div class="min-h-screen p-8 space-y-6">
+			<div class="max-w-md">
+				@Counter(initialCount)
+			</div>
+		</div>
+	}
+}

@@ -1,0 +1,8 @@
+module github.com/swarnimcodes/gopher-toolbox
+
+go 1.25.4
+
+require (
+	github.com/a-h/templ v0.3.960
+	github.com/go-chi/chi/v5 v5.2.3
+)

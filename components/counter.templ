@@ -1,0 +1,32 @@
+package components
+
+templ Counter(initialCount int) {
+	<div class="flex gap-5 items-centre">
+		<button
+			class="bg-red-500 p-2 rounded items-centre"
+			hx-post="/decrement"
+			hx-trigger="click"
+			hx-target="#result"
+			hx-swap="innerHTML"
+		>
+			-
+		</button>
+		<div id="result">
+			@CountDisplay(initialCount)
+		</div>
+		<button
+			class="bg-red-500 p-2 rounded items-centre"
+			hx-post="/increment"
+			hx-trigger="click"
+			hx-target="#result"
+			hx-swap="innerHTML"
+		>
+			+		
+		</button>
+	</div>
+}
+
+// this component is returned by the handler
+templ CountDisplay(count int) {
+	<span class="text-3xl font-bold text-green-400">{ count }</span>
+}
