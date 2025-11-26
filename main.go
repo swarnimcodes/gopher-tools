@@ -1,7 +1,9 @@
 package main
 
 import (
+	"embed"
 	"fmt"
+	"io/fs"
 	"log"
 	"net/http"
 
@@ -12,9 +14,21 @@ import (
 	"github.com/swarnimcodes/gopher-toolbox/handlers"
 )
 
+// embed the static dir into the binary at comp time
+//
+//go:embed static
+var staticFS embed.FS
+
 func main() {
 	r := chi.NewRouter()
-	r.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+
+	// create a sub-fs that starts at directory "static"
+	staticSub, err := fs.Sub(staticFS, "static")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	r.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.FS(staticSub))))
 
 	initialCount := 10
 	counterHandler := handlers.NewCounterHandler(initialCount)
