@@ -1,4 +1,4 @@
-module github.com/swarnimcodes/gopher-toolbox
+module github.com/swarnimcodes/gopher-tools
 
 go 1.25.4
 

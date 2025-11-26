@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/swarnimcodes/gopher-toolbox/components"
+	"github.com/swarnimcodes/gopher-tools/components"
 )
 
 type CounterHandler struct {
